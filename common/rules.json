@@ -120,6 +120,12 @@
     "threat": "HTMLElement Sink"
   },
   {
+    "name": ".html() ",
+    "source": "$_any.html($_unsafe)",
+    "desc": "Writing user specified HTML to the DOM may lead to Cross-Site Scripting",
+    "threat": "HTMLElement Sink"
+  },
+  {
     "name": ".outerHTML ",
     "source": "$_any.outerHTML=$_unsafe",
     "testhit": "a.outerHTML=foo",
@@ -630,14 +636,6 @@
     "testmiss": "",
     "desc": "Usage of sensitive API",
     "threat": ""
-  },
-  {
-    "name": "input-manage permission",
-    "source": "$_any.mgmt.hide()",
-    "testhit": "navigator.mozInputMethod.mgmt.hide()",
-    "testmiss": "",
-    "desc": "Usage of sensitive API",
-    "threat": "Certified API"
   },
   {
     "name": "mobileconnection permission",
